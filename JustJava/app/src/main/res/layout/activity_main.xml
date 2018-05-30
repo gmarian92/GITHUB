@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.example.marian.justjava.MainActivity">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.marian.justjava.MainActivity">
+
+
+
+
+    <EditText
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Name"
+        android:inputType="textMultiLine" />
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toppings"
+        android:textAllCaps="true"/>
+
+    <CheckBox
+        android:id="@+id/wCream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:drawableLeft="@android:color/transparent"
+        android:drawablePadding="24dp"
+        android:text="@string/Whipped_cream"
+        android:textSize="16sp" />
+    <CheckBox
+        android:id="@+id/chocolateBox"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@android:color/transparent"
+        android:drawablePadding="24dp"
+        android:text="@string/Chocolate"/>
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/Quantity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonD"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:onClick="decrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/buttonI"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:onClick="increment"
+            android:text="+" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="submitOrder"
+        android:text="@string/Order" />
+
+
+</LinearLayout>
+</ScrollView>
